@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch ...</title>
+    <link rel="shortcut icon" href="./610073.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            color: #d7dfe4;
+        }
+
+        .digit {
+            font-size: 150px;
+            font-weight: bold;
+        }
+
+        .txt {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 7px 25px;
+            font-size: 15px;
+            margin: 0px 10px;
+            color: white;
+            border: 0px;
+            cursor: pointer;
+        }
+
+        #abc {
+            background-color: #1abc9c;
+        }
+
+        #stop {
+            background-color: #3498db;
+        }
+
+        #reset {
+            background-color: #e74c3c;
+        }
+
+        .digit-con {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .digit-parent {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer">
+            <div class="digit-parent">
+                <div class="digit-con">
+                    <span class="digit" id="min">0</span>
+                </div>
+                <span class="txt">min</span>
+            </div>
+            <div class="digit-parent">
+                <div class="digit-con">
+                    <span class="digit" id="sec">0</span>
+                </div>
+                <span class="txt">sec</span>
+            </div>
+            <div class="digit-parent">
+                <div class="digit-con">
+                    <span class="digit" id="msec">0</span>
+                </div>
+                <span class="txt">msec</span>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="abc" onclick="started()" class="btn">start</button>
+            <button onclick="pause()" class="btn" id="stop">pause</button>
+            <button onclick="reset()" class="btn" id="reset">reset</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
